@@ -1,6 +1,10 @@
 
+# packages to load
 import os
 import pandas as pd
+
+
+# build class
 class Dispose:
 
     path_all = []
