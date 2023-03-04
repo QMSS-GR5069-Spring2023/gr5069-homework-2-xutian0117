@@ -110,8 +110,15 @@ class Dispose:
         for key, value in re_data_count.items():
             re_da_str += f'/{key}' if re_da_str else key
             count_str += f'/{key}:{value}' if count_str else f'{key}:{value}'
-        data_compute = {'len':len_re_str, 'key_frequency':float(f'{key_count / len_re_str:.2}') if len_re_str else None,'value_frequency':value_frequency,'re_success_data':re_success_data,'re_data_count':re_data_count}
-        re_data = {'High School':None,'Discipline Approach':re_da_str,'Exclusionary/Non-exclusionary':re_value,f'Count':count_str}
+        data_compute = {'len':len_re_str,
+                        'key_frequency':float(f'{key_count / len_re_str:.2}') if len_re_str else None,
+                        'value_frequency':value_frequency,
+                        're_success_data':re_success_data,
+                        're_data_count':re_data_count}
+        re_data = {'High School':None,
+                   'Discipline Approach':re_da_str,
+                   'Exclusionary/Non-exclusionary':re_value,
+                   f'Count':count_str}
         return re_data, data_compute
 
     def _dict_str(self, dict):
@@ -146,7 +153,16 @@ class Dispose:
         except TypeError:
             pass
 
-        re_dict = {'High School':key, 'Exclusionary Discipline Approach':re_dict_a['Discipline Approach'],'Non-exclusionary Discipline Approach':re_dict_b['Discipline Approach'], 'Exclusionary/Non-exclusionary':excl_mode,'Exclusionary Count':re_dict_a['Count'],'Non-exclusionary Count':re_dict_b['Count'],'Exclusionary Frequency':excl_freq_a,'Non-exclusionary Frequency':non_excl_freq_b,'Exclusionary Value Frequency':excl_value_freq_a,'Non-exclusionary Value Frequency':non_excl_value_freq_b}
+        re_dict = {'High School':key,
+                   'Exclusionary Discipline Approach':re_dict_a['Discipline Approach'],
+                   'Non-exclusionary Discipline Approach':re_dict_b['Discipline Approach'],
+                   'Exclusionary/Non-exclusionary':excl_mode,
+                   'Exclusionary Count':re_dict_a['Count'],
+                   'Non-exclusionary Count':re_dict_b['Count'],
+                   'Exclusionary Frequency':excl_freq_a,
+                   'Non-exclusionary Frequency':non_excl_freq_b,
+                   'Exclusionary Value Frequency':excl_value_freq_a,
+                   'Non-exclusionary Value Frequency':non_excl_value_freq_b}
         return re_dict
 
     def process_the_data(self):
