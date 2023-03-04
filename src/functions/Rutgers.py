@@ -7,6 +7,24 @@ import pandas as pd
 # build class
 class Dispose:
 
+# ::::::: DESCRIPTION
+## The function performs the following transformations in the data to
+# produce the desired output, which is a class:
+#
+# ::::::: INPUTS
+# Data on [not sure, please add information on the input data here].
+#
+# ::::::: OUTPUTS
+
+# 1. Identify the range of approaches and programs used:
+# 2. Identify the frequency of terms representing
+#    exclusionary and non-exclusionary discipline
+# 3. Identifying the frequency of terms representing exclusionary and
+#   non-exclusionary discipline infractions
+# 4. Identify if and how infractions (above) are defined.
+# 5. Identify the length of discipline applied (10 days vs. 1 day suspension) to infraction (above)
+# :::::::
+
     path_all = []
     disp_data = {
         'exclusionary':{
