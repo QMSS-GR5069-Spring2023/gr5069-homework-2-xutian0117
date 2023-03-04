@@ -116,7 +116,6 @@ class Dispose:
         re_value = None
         len_re_str = len(re_str)
         value_frequency = {}
-        # key_frequency = None
         key_count = 0
 
         for key, value in self.disp_data[key_dict].items():
@@ -215,5 +214,4 @@ def main(txt_file_path, execl_path):
     a.pandas_frame_data.to_excel(execl_path, index = False)
 
 if __name__ == '__main__':
-    # main('txt_file_path', 'execl_file_path')
     main(r'\data.xlsx')
