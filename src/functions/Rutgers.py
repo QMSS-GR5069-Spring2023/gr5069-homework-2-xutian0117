@@ -7,6 +7,24 @@ import pandas as pd
 # build class
 class Dispose:
 
+# ::::::: DESCRIPTION
+## The function performs the following transformations in the data to
+# produce the desired output, which is a class:
+#
+# ::::::: INPUTS
+# Data on [not sure, please add information on the input data here].
+#
+# ::::::: OUTPUTS
+
+# 1. Identify the range of approaches and programs used:
+# 2. Identify the frequency of terms representing
+#    exclusionary and non-exclusionary discipline
+# 3. Identifying the frequency of terms representing exclusionary and
+#   non-exclusionary discipline infractions
+# 4. Identify if and how infractions (above) are defined.
+# 5. Identify the length of discipline applied (10 days vs. 1 day suspension) to infraction (above)
+# :::::::
+
     path_all = []
     disp_data = {
         'exclusionary':{
@@ -98,7 +116,6 @@ class Dispose:
         re_value = None
         len_re_str = len(re_str)
         value_frequency = {}
-        # key_frequency = None
         key_count = 0
 
         for key, value in self.disp_data[key_dict].items():
@@ -197,5 +214,4 @@ def main(txt_file_path, execl_path):
     a.pandas_frame_data.to_excel(execl_path, index = False)
 
 if __name__ == '__main__':
-    # main('txt_file_path', 'execl_file_path')
     main(r'\data.xlsx')

@@ -2,8 +2,8 @@
 
 **Objective:** The objective of this repository is to develop a class. It includes 10 methods and compiles it into one main class.
 
-## Codebook for the project.
-- 1. Identifying the range of approaches and programs used:
+## Purpose of the project (as obtained from the codebook):
+- 1. Identify the range of approaches and programs used:
   - Approaches:
     - Restorative Justice, Restorative Practices, Restorative, circles 
     - PBIS, PBSIS, Positive Behavior Support, positive supports, tiered levels of consequences
@@ -16,7 +16,7 @@
     - 7 pillars of character development
     - 7 habits of happy teens
 
-- 2. Identifying the frequency of terms representing exclusionary and non-exclusionary discipline
+- 2. Identify the frequency of terms representing exclusionary and non-exclusionary discipline
   - Exclusionary
     - Suspension (in-school, out-of-school, Alternative learning center)
     - Zero tolerance
@@ -45,7 +45,7 @@
     - Levels of intervention for infractions
     - Point system?
 
-- 3. Identifying the frequency of terms representing exclusionary and non-exclusionary discipline
+- 3. Identify the frequency of terms representing exclusionary and non-exclusionary discipline
   - Infractions:
     - Theft
     - Drug use, possession
@@ -59,9 +59,9 @@
     - Sexual assault 
     - Self-harm
 
-- 4. Identifying if and how infractions (above) are defined 
+- 4. Identify if and how infractions (above) are defined 
 
-- 5. Identifying the length of discipline applied (10 days vs. 1 day suspension) to infraction (above)
+- 5. Identify the length of discipline applied (10 days vs. 1 day suspension) to infraction (above)
 
 - 6. Other information to code
 
