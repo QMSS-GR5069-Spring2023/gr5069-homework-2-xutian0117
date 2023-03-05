@@ -52,7 +52,8 @@ class Dispose:
             'pbis':None
         }
     }
-
+    
+# set up for defining the class
     def __init__(self):
         self.file_queue = []
         self.file_data = {}
@@ -62,6 +63,7 @@ class Dispose:
         self.data_frame_obj = pd.DataFrame
         self.pandas_frame_data = pd.DataFrame()
 
+# import data
     def get_file_directory(self, path, suffix = None, exclude = None,):
 
         suffix = suffix if suffix else '.txt'
@@ -85,7 +87,8 @@ class Dispose:
             with open(file_path_all, mode, encoding = encoding) as file:
                 name, suffix = os.path.splitext(file_path)
                 self.file_data.update({name:file.read()})
-
+                
+# define "exclusionary" and "non-exclusionary" dictionary
     def re_non_exclusionary(self, re_str, key_dict = 'Exclusionary'):
 
         re_da_str = ''
@@ -165,6 +168,8 @@ class Dispose:
                    'non-exclusionary value frequency':non_excl_value_freq_b}
         return re_dict
 
+    
+# process the data
     def process_the_data(self):
 
         for key, value in self.file_data.items():
@@ -175,7 +180,7 @@ class Dispose:
         data_frame = pd.DataFrame(self.dict_data)
         self.pandas_frame_data = data_frame
 
-
+# compile the class
 def main(txt_file_path, execl_path):
     '''
     
