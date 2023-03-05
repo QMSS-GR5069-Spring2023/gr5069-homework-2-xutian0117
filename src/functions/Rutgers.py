@@ -9,47 +9,47 @@ class Dispose:
 
     path_all = []
     disp_data = {
-        'Exclusionary':{
-            'Suspension':None,
-            'Zero tolerance':None,
-            'Law enforcement':None,
-            'Corporal punishment':None,
-            'Criminal charges':None,
-            'Expulsion':None,
-            'Punitive':None,
-            'Canine searches':None,
-            'Suspicionless searches':None,
-            'Hallway sweeps':None,
-            'In school suspension':None,
+        'exclusionary':{
+            'suspension':None,
+            'zero tolerance':None,
+            'law enforcement':None,
+            'corporal punishment':None,
+            'criminal charges':None,
+            'expulsion':None,
+            'punitive':None,
+            'canine searches':None,
+            'suspicionless searches':None,
+            'hallway sweeps':None,
+            'in school suspension':None,
             'out of school suspension':None,
             'police':None,
-            'Alternative learning center':None,
+            'alternative learning center':None,
             'search and seizure':None
 
 
         },
-        'Non-exclusionary':{
-            'Restorative Justice':None,
-            'Restorative Practices':None,
-            'Restorative':None,
+        'non-exclusionary':{
+            'restorative justice':None,
+            'restorative practices':None,
+            'restorative':None,
             'circles':None,
-            'Mutually agreed upon consequence':None,
-            'Progressive':None,
-            'Affirming':None,
+            'mutually agreed upon consequence':None,
+            'progressive':None,
+            'affirming':None,
             'identity':None,
-            'Culturally responsive':None,
-            'Social justice':None,
-            'Equity':None,
-            'Student rights':None,
+            'culturally responsive':None,
+            'social justice':None,
+            'equity':None,
+            'student rights':None,
             'student voice':None,
             'appeals process':None,
-            'Social emotional learning':None,
-            'Counseling':None,
-            'Positive Behavioral Intervention Supports':None,
-            'Tiered levels of consequences':None,
-            'Levels of intervention for infractions':None,
-            'Point system':None,
-            'PBIS':None
+            'social emotional learning':None,
+            'counseling':None,
+            'positive behavioral intervention supports':None,
+            'tiered levels of consequences':None,
+            'levels of intervention for infractions':None,
+            'point system':None,
+            'pbis':None
         }
     }
 
@@ -115,10 +115,10 @@ class Dispose:
                         'value_frequency':value_frequency,
                         're_success_data':re_success_data,
                         're_data_count':re_data_count}
-        re_data = {'High School':None,
-                   'Discipline Approach':re_da_str,
-                   'Exclusionary/Non-exclusionary':re_value,
-                   f'Count':count_str}
+        re_data = {'high school':None,
+                   'discipline approach':re_da_str,
+                   'exclusionary/non-exclusionary':re_value,
+                   f'count':count_str}
         return re_data, data_compute
 
     def _dict_str(self, dict):
@@ -136,7 +136,7 @@ class Dispose:
 
         excl_mode = None
         re_dict_a, data_compute_a = self.re_non_exclusionary(re_str)
-        re_dict_b, data_compute_b = self.re_non_exclusionary(re_str, 'Non-exclusionary')
+        re_dict_b, data_compute_b = self.re_non_exclusionary(re_str, 'non-exclusionary')
         excl_freq_a = data_compute_a['key_frequency']
         non_excl_freq_b = data_compute_b['key_frequency']
         excl_value_freq_a = self._dict_str(data_compute_a['value_frequency'])
@@ -145,24 +145,24 @@ class Dispose:
         key = key.replace('_', ' ') if type(key) == str else key
         try:
             if excl_freq_a == non_excl_freq_b:
-                excl_mode = 'Exclusionary/Non-exclusionary'
+                excl_mode = 'exclusionary/non-exclusionary'
             elif excl_freq_a > non_excl_freq_b:
-                excl_mode = 'Exclusionary'
+                excl_mode = 'exclusionary'
             else :
-                excl_mode = 'Non-exclusionary'
+                excl_mode = 'non-exclusionary'
         except TypeError:
             pass
 
-        re_dict = {'High School':key,
-                   'Exclusionary Discipline Approach':re_dict_a['Discipline Approach'],
-                   'Non-exclusionary Discipline Approach':re_dict_b['Discipline Approach'],
-                   'Exclusionary/Non-exclusionary':excl_mode,
-                   'Exclusionary Count':re_dict_a['Count'],
-                   'Non-exclusionary Count':re_dict_b['Count'],
-                   'Exclusionary Frequency':excl_freq_a,
-                   'Non-exclusionary Frequency':non_excl_freq_b,
-                   'Exclusionary Value Frequency':excl_value_freq_a,
-                   'Non-exclusionary Value Frequency':non_excl_value_freq_b}
+        re_dict = {'high school':key,
+                   'exclusionary discipline approach':re_dict_a['discipline approach'],
+                   'non-exclusionary discipline approach':re_dict_b['discipline approach'],
+                   'exclusionary/non-exclusionary':excl_mode,
+                   'exclusionary count':re_dict_a['count'],
+                   'non-exclusionary count':re_dict_b['count'],
+                   'exclusionary frequency':excl_freq_a,
+                   'non-exclusionary frequency':non_excl_freq_b,
+                   'exclusionary value frequency':excl_value_freq_a,
+                   'non-exclusionary value frequency':non_excl_value_freq_b}
         return re_dict
 
     def process_the_data(self):
